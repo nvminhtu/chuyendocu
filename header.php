@@ -35,11 +35,11 @@
 		<div class="container">
 			<div class="navbar-left">
 				<ul class="list-inline">
-				  <li><i class="fa fa-phone"></i>Hotline : <span class="blue-big">0907875974</span></li> 
+				  <li><i class="fa fa-phone"></i>Hotline : <span class="blue-big">0907875974</span></li>
 				  <li><i class="fa fa-user"></i><span>Huy</span>  <a href="vitinhthongnhat2011@yahoo.com">vitinhthongnhat2011@yahoo.com</a></li>
 				  <li><i class="fa fa-clock-o"></i>Thời gian làm việc : <span class="green-medium">từ 8:00 đến 20:00 (tất cả các ngày trong tuần)</span></li>
 				</ul>
-			</div>	
+			</div>
 			<div class="navbar-right">
 				<?php sparkling_social(); ?>
 			<!-- /.navbar-right --></div>
@@ -51,13 +51,14 @@
 		 	  	<div class="row">
 		 	  		<div id="logo" class="col-sm-4">
 				 		<div id="logo">
-							<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php bloginfo("template_url"); ?>/img/img-logo_cdc.jpg"  height="82" width="150" alt="<?php bloginfo( 'name' ); ?>"/></a>	
+							<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php bloginfo("template_url"); ?>/img/img-logo_cdc.jpg"  height="82" width="150" alt="<?php bloginfo( 'name' ); ?>"/></a>
 						</div>
 		 	  		</div>
 		 	  		<div id="location" class="col-sm-8">
 		 	  			<div class="inner-content">
-		 	  				<p><span class="glyphicon glyphicon-home"></span><span>&nbsp;Địa chỉ:</span> 432 Lê Văn Thọ , p.16, quận Gò Vấp, Tp HCM &nbsp;&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-phone"></span><span>&nbsp;Hotline:</span> 0907.875.974<br /></p>
-							<p><span class="glyphicon glyphicon-time"></span><span>&nbsp;Làm việc:</span> 8h30 - 20h30, CN: 8h30 - 17h30</p>
+								<?php dynamic_sidebar( 'top-header' ); ?>
+		 	  				<!-- <p><span class="glyphicon glyphicon-home"></span><span>&nbsp;Địa chỉ:</span> 432 Lê Văn Thọ , p.16, quận Gò Vấp, Tp HCM &nbsp;&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-phone"></span><span>&nbsp;Hotline:</span> 0907.875.974<br /></p>
+							<p><span class="glyphicon glyphicon-time"></span><span>&nbsp;Làm việc:</span> 8h30 - 20h30, CN: 8h30 - 17h30</p> -->
 		 	  			<!-- /.inner-content --></div>
 		 	  		</div>
 				</div>
@@ -94,7 +95,7 @@
 				<div class="col-sm-8">
 					<?php sparkling_featured_slider(); ?>
 				<!-- /.col-sm-8 --></div>
-				
+
 				<div class="col-sm-4">
 					<div class="latest-news">
 						<ul id="oscitas-tabs-0" class="nav nav-tabs">
@@ -122,7 +123,7 @@
 				<?php get_template_part( 'top', 'san-pham' );  ?>
 			<?php } else { ?>
 				<div class="top-breadcrumb col-sm-12">
-				<?php 
+				<?php
 						if(function_exists('bcn_display'))
 			    	{
 			        bcn_display();
