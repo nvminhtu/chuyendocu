@@ -12,6 +12,11 @@
 	</div><!-- close .container -->
 </div><!-- close .site-content -->
 
+
+	<div id="footer-phone" class="sticky-note">
+		<a href="tel:0907.875.974" class="phone-detect">0907.875.974</a>
+	<!-- #footer-phone --></div>
+
 	<div id="footer-top">
 		<div class="container">
 			<div class="row">
