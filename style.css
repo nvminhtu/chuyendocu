@@ -1375,7 +1375,7 @@ p.logged-in-as {
   background: #363636;
   background: rgba(100, 100, 100, 0.4);
   color: #FFF;
-  bottom: 4%;
+  bottom: 8%;
   cursor: pointer;
   display: none;
   position: fixed;
@@ -2026,4 +2026,32 @@ button[type=submit],
 #logo_des p {
   font-style: italic;
   padding-left: 10px;
+}
+.sticky-note {
+  display: none;
+}
+@media (max-width: 767px) {
+    .sticky-note {
+        display: block;
+        background: #363636;
+        background: rgba(100, 100, 100, 1);
+        color: #FFF;
+        bottom: 4%;
+        cursor: pointer;
+        position: fixed;
+        left: 20px;
+        z-index: 999;
+        font-size: 30px;
+        text-align: center;
+        line-height: 45px;
+        width: 200px;
+        border-radius: 4px;
+        -webkit-transition: background-color 0.3s linear;
+           -moz-transition: background-color 0.3s linear;
+             -o-transition: background-color 0.3s linear;
+                transition: background-color 0.3s linear;
+    }
+    .sticky-note a {
+      color: #ffffff;
+    }
 }

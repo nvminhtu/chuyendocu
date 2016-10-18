@@ -14,7 +14,7 @@
 
 
 	<div id="footer-phone" class="sticky-note">
-		<a href="tel:0907.875.974" class="phone-detect">0907.875.974</a>
+		<a href="tel:0907875974" class="phone-detect"><span class="glyphicon glyphicon-phone">0907875974</span></a>
 	<!-- #footer-phone --></div>
 
 	<div id="footer-top">

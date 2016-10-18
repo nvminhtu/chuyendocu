@@ -12,21 +12,24 @@
 	  	<!-- /.img-item --></div>
 			<div class="item-info">
 				<span class="item-title"><?php the_title(); ?><!-- /.item-title --></span>
+				<?php
+							$price = get_post_meta($post->ID, 'Gia', true);
+							$tinhtrang = get_post_meta($post->ID, 'Tinhtrang', true);
+				 ?>
 	  		<span class="item-price">
-	  			<?php 
-						$price = get_post_meta($post->ID, 'Gia', true);
-						if($price=="") 
+	  			<?php
+						if($price=="")
 							echo '<span class="btn btn-success btn-sm " target="_blank"><i class="glyphicon glyphicon-phone"></i> Giá Liên hệ</span>';
 						 else
-						   echo  $price." VND"; ?> </span><br />
-					
+						   echo  $price." VND"; ?> </span>
+
 	  		<!-- /.item-price --></span>
 	  		<span class="item-status">
-				<?php 
-					if(isset($tinhtrang)&&$tinhtrang!="") 
-					   echo strip_tags($tinhtrang);
+				<?php
+					if(isset($tinhtrang)&&$tinhtrang!="")
+						 echo strip_tags($tinhtrang);
 					else
-					   echo '';
+						 echo '';
 				?>
 				</span>
 	  		<a class="btn btn-info btn " target="_blank"><i class="fa fa-shopping-cart"></i>Xem chi tiết</a>
