@@ -76,9 +76,6 @@ function prefix_register_post_type()
 				'excerpt',
 				'custom-fields',
 			),
-			// 'taxonomies'    => array(
-			// 	'loai-linh-kien'
-			// ),
 			'has_archive'   => true,
 			'rewrite'       => array(
 				'slug' => 'linh-kien',
@@ -86,6 +83,45 @@ function prefix_register_post_type()
 		)
 	);
 
+	register_post_type(
+		'dich-vu',
+		array(
+			'labels'        => array(
+				'name'               => __('Dịch vụ', 'text_domain'),
+				'singular_name'      => __('Dịch vụ', 'text_domain'),
+				'menu_name'          => __('Dịch vụ', 'text_domain'),
+				'name_admin_bar'     => __('Dịch vụ', 'text_domain'),
+				'all_items'          => __('Tất cả', 'text_domain'),
+				'add_new'            => _x('Thêm mới', 'dich-vu', 'text_domain'),
+				'add_new_item'       => __('Thêm Mới Dịch vụ', 'text_domain'),
+				'edit_item'          => __('Chỉnh sửa Dịch vụ', 'text_domain'),
+				'new_item'           => __('Mới Dịch vụ', 'text_domain'),
+				'view_item'          => __('View Dịch vụ', 'text_domain'),
+				'search_items'       => __('Search Dịch vụ', 'text_domain'),
+				'not_found'          => __('No Dịch vụ found.', 'text_domain'),
+				'not_found_in_trash' => __('No Dịch vụ found in Trash.', 'text_domain'),
+				'parent_item_colon'  => __('Parent Items:', 'text_domain'),
+			),
+			'public'        => true,
+			'menu_position' => 5,
+			'taxonomies' => array('post_tag'),
+			'supports'      => array(
+				'title',
+				'tags',
+				'editor',
+				'thumbnail',
+				'excerpt',
+				'custom-fields',
+			),
+			// 'taxonomies'    => array(
+			// 	'loai-linh-kien'
+			// ),
+			'has_archive'   => true,
+			'rewrite'       => array(
+				'slug' => 'dich-vu',
+			),
+		)
+	);
 }
 
 add_action('init', 'prefix_register_post_type');

@@ -17,7 +17,7 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 			<article <?php post_class(); ?>>
 				<?php 
-					$args = array( 'orderby' => 'menu-order', 'order' => 'DESC' );
+					$args = array( 'orderby' => 'menu-order', 'order' => 'DESC', 'hide_empty' => true);
 					$terms = get_terms("hang",$args);
 					
 					$count = count($terms);
@@ -36,8 +36,8 @@ get_header(); ?>
 										$posts_per_page = get_option("posts_per_page"); 
 										$query = new WP_Query( 
 											array( 'post_type' => 'laptop',
-														 'hang' => $term->slug,
-			        							 'posts_per_page'=> -1
+													'hang' => $term->slug,
+			        							 	'posts_per_page'=> -1
 													) );
 										$num_posts = $query->post_count;
 										if ( $query->have_posts() ) : $order = 0; ?>
@@ -79,7 +79,7 @@ get_header(); ?>
 								<!-- show 404 error here -->
 							<?php endif; ?>
 							<!-- #.row --></div>
-						<div class="row"><div class="pull-right"><a class="btn btn-danger btn-sm" href="/linh-kien/<?php echo $term->slug; ?>" target="_blank"><i class="fa fa-arrow-right"></i> Xem linh kiện đầy đủ</a></div></div>
+						<div class="row"><div class="pull-right"><a class="btn btn-danger btn-sm" href="/linh-kien/" target="_blank"><i class="fa fa-arrow-right"></i> Xem linh kiện đầy đủ</a></div></div>
 					</div>
 				</div>
 			</article><!-- #post-## -->

@@ -10,8 +10,9 @@
 								// args
 								$args = array(
 									'numberposts'	=> -1,
+									'posts_per_page' => -1,
 									'post_type'		=> 'laptop',
-									'meta_key'		=> 'noibat',
+									'meta_key'		=> 'sp_noibat',
 									'meta_value'	=> 'true'
 								);
 
@@ -23,7 +24,9 @@
 								<?php if( $the_query->have_posts() ): ?>
 
 									<?php while( $the_query->have_posts() ) : $the_query->the_post(); ?>
-										<div class="content_box">
+										<?php $conhang = get_post_meta($post->ID, 'conhang', true);
+										if(	$conhang==true) { ?>
+											<div class="content_box">
 									  	<a href="<?php the_permalink(); ?>">
 										  	<div class="img-item">
 										  		<?php the_post_thumbnail( 'sparkling-featured', array( 'class' => 'single-featured' )); ?>
@@ -67,7 +70,7 @@
 										  	<!-- /.item-info --></div>
 										  </a>
 											<!-- /.content_box --></div>
-
+										<?php } ?>
 									<?php endwhile; ?>
 
 								<?php endif; ?>

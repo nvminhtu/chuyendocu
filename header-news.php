@@ -49,7 +49,7 @@
 	 	  <div class="container">
 	 	  	<div class="row">
 			 		<div id="logo">
-						<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php bloginfo("template_url"); ?>/img/img-logo_cdc.jpg"  height="82" width="150" alt="<?php bloginfo( 'name' ); ?>"/></a>	
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php bloginfo("template_url"); ?>/img/logo-cdc.png" alt="<?php bloginfo( 'name' ); ?>"/></a>	
 					</div>
 
 				</div>

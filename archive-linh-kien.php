@@ -13,7 +13,7 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 			<article <?php post_class(); ?>>
 				<div class="blog-item-wrap">
-					<h3><?php _e( 'Linh kiện', 'name_products' ); ?></h3>
+					<h3><?php _e( 'Laptop', 'name_products' ); ?></h3>
 					<div class="post-inner-content">
 						<?php
 							global $wp_rewrite;
@@ -22,7 +22,7 @@ get_header(); ?>
 							if ( get_query_var('page') ) $paged = get_query_var('page');
 							$posts_per_page = get_option("posts_per_page"); 
 							$query = new WP_Query( 
-								array( 'post_type' => 'laptop',
+								array( 'post_type' => 'linh-kien',
         							 'posts_per_page'=> $posts_per_page,
 											 'paged' => $paged 
 										) );

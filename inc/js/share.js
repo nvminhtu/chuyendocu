@@ -1,5 +1,5 @@
 ;(function($) {
-  var 
+  var
     browserDetection,
     UA = navigator.userAgent,
     carousel,
@@ -7,7 +7,7 @@
     topcarousel,
     hoverProduct,
     isIE;
-  
+
   "use strict";
   $(function(){
     carousel();
@@ -58,9 +58,10 @@
       ]
     });
    };
- 
+
    topcarousel = function() {
     $('.top_carousel').slick({
+      dots: true,
       infinite: true,
       speed: 300,
       slidesToShow: 4,
@@ -94,7 +95,7 @@
       ]
     });
    };
-  
+
   slideClick = function() {
     $('.content_box').on('click', function(event) {
       event.preventDefault();
@@ -102,6 +103,5 @@
       window.location.href = $url;
     });
   }
-  
-})(jQuery);
 
+})(jQuery);

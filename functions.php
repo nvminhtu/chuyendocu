@@ -64,6 +64,8 @@ function sparkling_setup() {
   add_image_size( 'sparkling-featured', 800, 720, true );
   add_image_size( 'thepray', 252, 193, true );
   add_image_size( 'tab-small', 60, 60 , true); // Small Thumbnail
+  add_image_size( 'laptop-thumb', 244, 219 , true); 
+
 
   // This theme uses wp_nav_menu() in one location.
   register_nav_menus( array(
