@@ -42,7 +42,7 @@ sparkling is based on Underscores http://underscores.me/, (C) 2012-2015 Automatt
 ----------------------------------------------- */
 body {
   color: #6B6B6B;
-  background-color: #E8E8E8;
+  background-color: #FFFFFF;
   word-wrap: break-word;
   font-family: Arial,"Arial Unicode MS",Helvetica,sans-serif;
   line-height: 1.7;
@@ -371,21 +371,10 @@ hr.section-divider {
 }
 .blog-item-wrap,
 #head_product {
-  -webkit-box-shadow: -5px 4px 28px -7px rgba(0,0,0,0.75);
+  /*-webkit-box-shadow: -5px 4px 28px -7px rgba(0,0,0,0.75);
   -moz-box-shadow: -5px 4px 28px -7px rgba(0,0,0,0.75);
-  box-shadow: -5px 4px 28px -7px rgba(0,0,0,0.75);
+  box-shadow: -5px 4px 28px -7px rgba(0,0,0,0.75);*/
 }
-/* #head_product.post-inner-content
------------------------------------------------ */
-/*#head_product .post-inner-content {
-  border: 2px solid #21CA71;
-  border-top: none;
-}
-#head_product.grid-area h3 {
-  color: #21CA71;
-  border-bottom: 2px solid #21CA71;
-  background: url(img/title-head-bg.png) left top #fcfbfb no-repeat;
-}*/
 .post-inner-content {
   padding: 15px 15px;
   background-color: #fff;
@@ -530,16 +519,9 @@ object {
   padding: 0px 8px;
   margin-bottom: -1px;
   background-color: #fff;
-  border: 1px solid #ddd;
-}
-.widget ul li:hover {
-  background-color: #ea444f;
-}
-#secondary .widget ul li:hover a {
-  color: #fff;
 }
 #secondary .widget ul li:hover a:hover {
-  color: #fff;
+  color: #333;
 }
 .widget ul {
   padding: 0;
@@ -553,9 +535,6 @@ object {
   margin-bottom: 20px;
   color: #C1C0C0;
   overflow: hidden;
-  webkit-box-shadow: -5px 13px 22px -15px rgba(0,0,0,0.75);
-  -moz-box-shadow: -5px 13px 22px -15px rgba(0,0,0,0.75);
-  box-shadow: -5px 13px 22px -15px rgba(0,0,0,0.75);
 }
 #secondary .textwidget {
   padding: 5px;
@@ -597,8 +576,7 @@ object {
   text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 0;
-  background: #476167;
-  color: #ffffff;
+  color: #333333;
   padding: 20px 5px 20px 15px;
 }
 #secondary .widget a {
@@ -631,6 +609,8 @@ object {
   -moz-border-radius-bottomleft: 10px;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
+  -webkit-box-shadow: none!important;
+  -webkit-box-shadow: none!important;
 }
 .widget ul ul {
   padding: 10px;
@@ -1020,7 +1000,7 @@ button:hover {
 }
 .nav.navbar-nav {
   padding: 0px 0;
-  float: right;
+  float: left;
 }
 .navbar-nav > li {
   margin: 0px;
@@ -1576,10 +1556,8 @@ button[type=submit],
   text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 0;
-  color: #ffffff;
-  padding: 20px 5px 20px 20px;
-  border-top: 1px solid #efefef;
-  background: #476167;
+  color: #333333;
+  padding: 5px 5px 20px 5px;
 }
 .grid-area .col-lg-4 img {
   width: 100%;
@@ -1708,22 +1686,30 @@ button[type=submit],
   padding-left: 0;
   padding-right: 0;
 }
+.product-detail.col-md-8.col-xs-8.col-sm-8 {
+  padding-right: 0;
+  padding-left: 0;
+}
+.product-detail .col-md-8,
+.product-detail .col-xs-8,
+.product-detail .col-sm-8 {
+  padding-right: 0;
+  padding-left: 0;
+}
 .product-detail .content_box {
-  border-width: 1px;
-  border-style: solid;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   border-radius: 5px;
   padding: 10px;
   text-align: left;
   margin: 5px;
-  border-color: #e5e5e5;
+  border-bottom: 1px solid #eee!important;
 }
 .product-detail .content_box:hover {
   cursor: pointer;
 }
 .product-detail .content_box a {
-  color: #2f2f2f;
+  color: #000000;
   display: block;
 }
 .product-detail .content_box .item-info {
@@ -1764,7 +1750,7 @@ button[type=submit],
 }
 .product-detail .content_box .item-title {
   color: #2f2f2f;
-  font-size: 95%;
+  font-size: 110%;
   font-weight: bold;
 }
 .wp-tag-cloud li {
@@ -1794,7 +1780,7 @@ button[type=submit],
   background: url(img/img-page-loader.gif) 50% 50% no-repeat rgb(249,249,249);*/
 }
 #masthead {
-  margin-top: 40px;
+  margin-top: 5px;
 }
 #top-menu.navbar {
   background-color: #2C2D2F;
@@ -1989,7 +1975,7 @@ button[type=submit],
   font: 15px Helvetica,Arial,'DejaVu Sans','Liberation Sans',Freesans,sans-serif!important;
 }
 .news .item-title {
-   font: 18px Helvetica,Arial,'DejaVu Sans','Liberation Sans',Freesans,sans-serif!important;
+   font: 22px Helvetica,Arial,'DejaVu Sans','Liberation Sans',Freesans,sans-serif!important;
    background: none;
    color: #000000;
    font-weight: bold;
@@ -2013,7 +1999,7 @@ button[type=submit],
   font-weight: bold;
 }
 #location .inner-content {
-  float: right;
+  float: left;
   font-size: 117%;
   padding: 0 15px;
 }
@@ -2054,4 +2040,10 @@ button[type=submit],
     .sticky-note a {
       color: #ffffff;
     }
+}
+.content-dichvu {
+  padding-left: 15px;
+}
+.content-dichvu p {
+  font-size: 13px!important;  
 }

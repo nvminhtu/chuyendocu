@@ -29,6 +29,7 @@ function prefix_register_post_type()
 			'menu_position' => 5,
 			'supports'      => array(
 				'title',
+				'revisions',
 				'tags',
 				'editor',
 				'thumbnail',
@@ -73,6 +74,7 @@ function prefix_register_post_type()
 				'tags',
 				'editor',
 				'thumbnail',
+				'revisions',
 				'excerpt',
 				'custom-fields',
 			),
@@ -109,6 +111,7 @@ function prefix_register_post_type()
 				'title',
 				'tags',
 				'editor',
+				'revisions',
 				'thumbnail',
 				'excerpt',
 				'custom-fields',

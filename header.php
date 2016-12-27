@@ -49,13 +49,13 @@
 	 	<div class="top-header">
 	 	  <div class="container">
 		 	  	<div class="row">
-		 	  		<div id="logo" class="col-sm-4">
+		 	  		<div id="logo" class="col-md-3 col-xs-12 col-sm-12">
 					 		<div id="logo_des">
 								<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php bloginfo("template_url"); ?>/img/logo-cdc.png" alt="<?php bloginfo( 'name' ); ?>"/></a>
 								<p><strong><?php bloginfo('description'); ?></strong></p>
 							</div>
 		 	  		</div>
-		 	  		<div id="location" class="col-sm-8">
+		 	  		<div id="location" class="col-md-9 col-xs-12 col-sm-12">
 		 	  			<div class="inner-content">
 								<?php dynamic_sidebar( 'top-header' ); ?>
 		 	  				<!-- <p><span class="glyphicon glyphicon-home"></span><span>&nbsp;Địa chỉ:</span> 432 Lê Văn Thọ , p.16, quận Gò Vấp, Tp HCM &nbsp;&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-phone"></span><span>&nbsp;Hotline:</span> 0907.875.974<br /></p>

@@ -195,6 +195,16 @@ function sparkling_widgets_init() {
     'after_title'   => '</h3>',
   ));
 
+  register_sidebar(array(
+    'id'            => 'sidebar-dich-vu',
+    'name'          =>  esc_html__( 'Sidebar Dich Vu', 'sparkling' ),
+    'description'   =>  esc_html__( 'Used for sidebar news area', 'sparkling' ),
+    'before_widget' => '<div id="%1$s" class="widget %2$s">',
+    'after_widget'  => '</div>',
+    'before_title'  => '<h3 class="widgettitle">',
+    'after_title'   => '</h3>',
+  ));
+
   register_widget( 'sparkling_social_widget' );
   register_widget( 'sparkling_popular_posts' );
   register_widget( 'sparkling_categories' );
