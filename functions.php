@@ -236,6 +236,8 @@ add_filter( 'gallery_style', 'sparkling_remove_gallery_css' );
 function sparkling_scripts() {
 
   // Add Bootstrap default CSS
+ 
+
   wp_enqueue_style( 'sparkling-bootstrap', get_template_directory_uri() . '/inc/css/bootstrap.min.css' );
 
   // Add Font Awesome stylesheet
@@ -294,6 +296,8 @@ function sparkling_scripts() {
 
   // Add main theme stylesheet
   wp_enqueue_style( 'responsive-style', get_stylesheet_uri() );
+
+   wp_enqueue_style( 'responsive-chuyendocu', get_template_directory_uri() . '/inc/css/responsive.css' );
 }
 add_action( 'wp_enqueue_scripts', 'sparkling_scripts' );
 

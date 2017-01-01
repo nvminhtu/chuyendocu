@@ -106,7 +106,6 @@ function prefix_register_post_type()
 			),
 			'public'        => true,
 			'menu_position' => 5,
-			'taxonomies' => array('post_tag'),
 			'supports'      => array(
 				'title',
 				'tags',
@@ -116,9 +115,10 @@ function prefix_register_post_type()
 				'excerpt',
 				'custom-fields',
 			),
-			// 'taxonomies'    => array(
-			// 	'loai-linh-kien'
-			// ),
+			'taxonomies'    => array(
+				'loai-dich-vu',
+				'post_tag'
+			),
 			'has_archive'   => true,
 			'rewrite'       => array(
 				'slug' => 'dich-vu',
@@ -218,6 +218,31 @@ function prefix_register_taxonomy()
 		)
 	);
 
+	register_taxonomy(
+		'loai-dich-vu',
+		array(
+			'dich-vu',
+		),
+		array(
+			'labels'            => array(
+				'name'              => _x('Loại dịch vụ', 'dich-vu', 'text_domain'),
+				'singular_name'     => _x('Loại dịch vụ', 'dich-vu', 'text_domain'),
+				'menu_name'         => __('Loại dịch vụ', 'text_domain'),
+				'all_items'         => __('All Loại dịch vụ', 'text_domain'),
+				'edit_item'         => __('Chỉnh sửa Loại dịch vụ', 'text_domain'),
+				'view_item'         => __('View Loại dịch vụ', 'text_domain'),
+				'update_item'       => __('Cập nhật Loại dịch vụ', 'text_domain'),
+				'add_new_item'      => __('Thêm mới Loại dịch vụ', 'text_domain'),
+				'new_item_name'     => __('Mới Loại dịch vụ', 'text_domain'),
+				'parent_item'       => __('Parent Loại dịch vụ', 'text_domain'),
+				'parent_item_colon' => __('Parent Loại dịch vụ:', 'text_domain'),
+				'search_items'      => __('Search Loại dịch vụ', 'text_domain'),
+			),
+			'show_admin_column' => true,
+			'hierarchical'      => true,
+			'query_var' => true
+		)
+	);
 }
 
 add_action('init', 'prefix_register_taxonomy', 0);

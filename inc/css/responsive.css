@@ -1,0 +1,31 @@
+@media screen and (max-width: 780px) {
+    .flexslider,
+    .top-page,
+    #footer-top,
+    #top_intro {
+        display: none;
+    }
+    #logo {
+    	padding: 0;
+    }
+    #secondary {
+    	display: none;
+    }
+    #logo_des {
+    	width: 30%;
+    	margin: 0 auto;
+    }
+    #location {
+    	margin: 0 auto;
+    	padding: 0;
+    }
+    #logo_des p {
+    	padding: 0;
+    }
+    #location p {
+    	margin-bottom: 3px;
+    }
+    #location .inner-content {
+    	font-size: 90%;
+    }
+}
