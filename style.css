@@ -368,6 +368,7 @@ hr.section-divider {
 .single-view,
 .blog-item-wrap {
   margin-bottom: 15px;
+  border-bottom: 1px solid #e4e4e4;
 }
 .blog-item-wrap,
 #head_product {
@@ -1703,7 +1704,6 @@ button[type=submit],
   padding: 10px;
   text-align: left;
   margin: 5px;
-  border-bottom: 1px solid #eee!important;
 }
 .product-detail .content_box:hover {
   cursor: pointer;

@@ -20,6 +20,4 @@ get_header(); ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
-
-<?php get_sidebar('news'); ?>
 <?php get_footer(); ?>

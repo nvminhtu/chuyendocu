@@ -1,37 +1,4 @@
-<?php
-/**
- * The Header for our theme.
- *
- * Displays all of the <head> section and everything up till <div id="content">
- *
- * @package sparkling
- */
-?><!doctype html>
-	<!--[if !IE]>
-	<html class="no-js non-ie" <?php language_attributes(); ?>> <![endif]-->
-	<!--[if IE 7 ]>
-	<html class="no-js ie7" <?php language_attributes(); ?>> <![endif]-->
-	<!--[if IE 8 ]>
-	<html class="no-js ie8" <?php language_attributes(); ?>> <![endif]-->
-	<!--[if IE 9 ]>
-	<html class="no-js ie9" <?php language_attributes(); ?>> <![endif]-->
-	<!--[if gt IE 9]><!-->
-<html class="no-js" <?php language_attributes(); ?>> <!--<![endif]-->
-<head>
-<meta charset="<?php bloginfo( 'charset' ); ?>">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="profile" href="http://gmpg.org/xfn/11">
-<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-<link rel="icon" type="image/png" href="<?php bloginfo('template_url'); ?>/img/favicon-cdc.ico" />
-<?php wp_head(); ?>
-<script type='text/javascript' src='http://www.chuyendocu.net/wp-content/themes/rgbstore/js/jquery.mousewheel.js?ver=3.5'></script>
-</head>
-
-<body <?php body_class(); ?>>
-<div class="loader"></div>
-<div id="page" class="hfeed site">
-	<div id="top-menu" class="navbar navbar-default navbar-fixed-top">
+<div id="top-menu" class="navbar navbar-default navbar-fixed-top">
 		<div class="container">
 			<div class="navbar-left">
 				<ul class="list-inline">
@@ -135,10 +102,4 @@
 
 		<div class="container main-content-area">
 			<div class="row">
-				<?php if (is_front_page()||is_home()) { ?>
-					<div class="main-content-inner col-sm-12 col-md-12">
-				<?php } ?>
-				
-				<?php  if(get_post_type() == 'laptop' && is_singular() || get_post_type() == 'post' && is_singular()) { ?>
-					<div class="main-content-inner col-sm-12 col-md-12">
-				<?php } ?>
+			 	

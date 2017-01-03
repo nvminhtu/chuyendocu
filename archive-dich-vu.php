@@ -43,5 +43,4 @@ get_header(); ?>
 			</article><!-- #post-## -->
 		</main><!-- #main -->
 	</div><!-- #primary -->
-<?php get_sidebar('dich-vu'); ?>
 <?php get_footer(); ?>
