@@ -39,7 +39,7 @@
 				<ul class="list-group ">
 				   <li class="list-group-item"><i class="fa fa-tags"></i><strong>Tình trạng:</strong> <span class="btn btn-warning btn-sm"><?php echo $tinhtrang = get_post_meta($post->ID, 'Tinhtrang', true);  ?></span></li>
 				</ul>
-				<div class="alert alert-info ">Gọi cho chúng tôi <br />Mr Hiếu: <span class="btn btn-success btn">0984530441</span>&nbsp;&nbsp;&nbsp;Mr Huy: <span class="btn btn-danger btn">0907.875.974</span></div>
+				<div class="alert alert-info ">Gọi cho chúng tôi <br />Điện thoại: <span class="btn btn-success btn">08.8898.3595</span>&nbsp;&nbsp;&nbsp;Mr Huy: <span class="btn btn-danger btn">0907.875.974</span></div>
 			</div>
 		</div>
 		

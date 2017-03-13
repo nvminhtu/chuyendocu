@@ -3,7 +3,7 @@
  * @package sparkling-load san-pham
  */
 ?>
-<div class="product-detail col-md-4 col-xs-4 col-sm-4">
+<div class="product-detail col-md-4 col-xs-12 col-sm-12">
 	<div class="content_box">
 		<a href="<?php the_permalink(); ?>" rel="bookmark">
 			<!-- <span><?php the_title(); ?></span> -->
