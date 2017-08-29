@@ -64,7 +64,7 @@ function sparkling_setup() {
   add_image_size( 'sparkling-featured', 800, 720, true );
   add_image_size( 'thepray', 252, 193, true );
   add_image_size( 'tab-small', 60, 60 , true); // Small Thumbnail
-  add_image_size( 'laptop-thumb', 244, 219 , true); 
+  add_image_size( 'laptop-thumb', 244, 219 , true);
 
 
   // This theme uses wp_nav_menu() in one location.
@@ -156,6 +156,16 @@ function sparkling_widgets_init() {
   ));
 
   register_sidebar(array(
+    'id'            => 'home-sp-widget',
+    'name'          =>  esc_html__( 'Homepage SP', 'sparkling' ),
+    'description'   =>  esc_html__( 'Displays on the Home Page', 'sparkling' ),
+    'before_widget' => '<div id="%1$s" class="widget %2$s">',
+    'after_widget'  => '</div>',
+    'before_title'  => '<h3 class="widgettitle">',
+    'after_title'   => '</h3>',
+  ));
+
+  register_sidebar(array(
     'id'            => 'footer-widget-1',
     'name'          =>  esc_html__( 'Footer Widget 1', 'sparkling' ),
     'description'   =>  esc_html__( 'Used for footer widget area', 'sparkling' ),
@@ -236,7 +246,7 @@ add_filter( 'gallery_style', 'sparkling_remove_gallery_css' );
 function sparkling_scripts() {
 
   // Add Bootstrap default CSS
- 
+
 
   wp_enqueue_style( 'sparkling-bootstrap', get_template_directory_uri() . '/inc/css/bootstrap.min.css' );
 

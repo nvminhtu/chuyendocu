@@ -66,6 +66,11 @@
 		<nav class="navbar navbar-default" role="navigation">
 			<div class="container">
 				<div class="row">
+					<div class="search-sp col-sm-12 col-md-12 col-xs-12">
+						<?php if ( ! dynamic_sidebar( 'home-sp-widget' ) ) : ?>
+							<p>laptop SP</p>
+						<?php endif; ?>
+					</div>
 					<div class="site-navigation-inner col-sm-12">
 						<div class="navbar-header col-sm-4">
 							<button type="button" class="btn navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -74,7 +79,6 @@
 								<span class="icon-bar"></span>
 								<span class="icon-bar"></span>
 							</button>
-
 						</div>
 
 						<div class="col-sm-12">
@@ -135,10 +139,13 @@
 
 		<div class="container main-content-area">
 			<div class="row">
-				<?php if (is_front_page()||is_home()) { ?>
+				<?php if (!is_front_page()||!is_home()) { ?>
+					<?php if ( ! dynamic_sidebar( 'home-sp-widget' ) ) : ?>
+						<p>laptop SP</p>
+				  <?php endif; ?>
 					<div class="main-content-inner col-sm-12 col-md-12">
 				<?php } ?>
-				
+
 				<?php  if(get_post_type() == 'laptop' && is_singular() || get_post_type() == 'post' && is_singular()) { ?>
 					<div class="main-content-inner col-sm-12 col-md-12">
 				<?php } ?>

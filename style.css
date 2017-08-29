@@ -296,6 +296,9 @@ textarea {
   margin-top: 5px;
   margin-bottom: 15px;
 }
+.content-area {
+  margin-top: 10px;
+}
 /* =Post styling
 ----------------------------------------------- */
 .entry-meta a {
@@ -1619,7 +1622,6 @@ button[type=submit],
 }
 #slide_intro .latest-news .tab-content {
   padding: 5px 10px;
-  height: 245px;
 }
 #slide_intro .latest-news .nav-tabs {
   border-top: 2px solid #E64B32;
@@ -1780,7 +1782,7 @@ button[type=submit],
   background: url(img/img-page-loader.gif) 50% 50% no-repeat rgb(249,249,249);*/
 }
 #masthead {
-  margin-top: 5px;
+  margin-top: 45px;
 }
 #top-menu.navbar {
   background-color: #2C2D2F;
@@ -2045,5 +2047,24 @@ button[type=submit],
   padding-left: 15px;
 }
 .content-dichvu p {
-  font-size: 13px!important;  
+  font-size: 13px!important;
+}
+#search-2 {
+  padding: 20px;
+  background: #343746;
+}
+.search-sp {
+  display: none;
+}
+@media (max-width: 767px) {
+  .search-sp {
+    padding: 15px;
+    color: #ffffff;
+    display: block;
+  }
+}
+#menu-policy-menu li {
+  background: url(img/fast-forward.png) left top no-repeat!important;
+  padding-left: 20px;
+  margin-bottom: 10px;
 }

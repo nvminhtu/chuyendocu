@@ -32,6 +32,10 @@
 			<div class="row">
 				<?php get_sidebar( 'footer' ); ?>
 			</div>
+			<div class="row">
+				<p>Giấy phép kinh doanh số 0313582229 do Sở KH và ĐT TP Hồ Chí Minh cấp ngày 17/12/2015 –  Giám đốc Đào Nguyễn Khánh Huy</p>
+				<p>Địa Chỉ: 108/7 Đường số 1, P. 16, Q. Gò Vấp, Tp. HCM</p>
+			</div>
 		</div>
 
 		<footer id="colophon" class="site-footer" role="contentinfo">
