@@ -2063,8 +2063,11 @@ button[type=submit],
     display: block;
   }
 }
+<<<<<<< HEAD
 #menu-policy-menu li {
   background: url(img/fast-forward.png) left top no-repeat!important;
   padding-left: 20px;
   margin-bottom: 10px;
 }
+=======
+>>>>>>> 4e1b39424ce744fa01aee53c6eb8d91ac3f7789c
