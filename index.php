@@ -72,7 +72,7 @@ get_header(); ?>
 							$num_posts = $query->post_count;
 							if ( $query->have_posts() ) : $order = 0; ?>
 								<?php while ( $query->have_posts() ) : $query->the_post(); ?>	
-									<?php get_template_part( 'content', 'linh-kien' );  ?>
+									<?php get_template_part( 'content', 'san-pham' );  ?>
 								<?php endwhile; ?><?php wp_reset_postdata(); ?>
 								<!-- show pagination here -->
 							<?php else : ?>

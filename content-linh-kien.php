@@ -1,34 +1,89 @@
 <?php
 /**
- * @package sparkling load linh kiện ra
+ * @package sparkling
  */
 ?>
-<div class="product-detail col-md-12 col-xs-12 col-sm-12">
-	<div class="content_box">
-		<a href="<?php the_permalink(); ?>" rel="bookmark">
-			<div class="img-item">
-	  		<?php the_post_thumbnail( 'sparkling-featured', array( 'class' => 'single-featured' )); ?>
-	  	<!-- /.img-item --></div>
-	  	<?php  ?>
-	  	<div class="mouse_box">
-	  		<?php 
-	  			echo $cauhinh = get_post_meta($post->ID, 'cauhinh', true); 
+
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<h1 class="entry-title "><?php the_title(); ?></h1>
+	<div class="post-inner-content">
+		<header class="entry-header page-header">
+		
+			<div class="entry-meta">
+				<?php
+					/* translators: used between list items, there is a space after the comma */
+					$categories_list = get_the_category_list( esc_html__( ', ', 'sparkling' ) );
+					if ( $categories_list && sparkling_categorized_blog() ) :
 				?>
-				<span class="overlay"></span>
-			</div> 
-			<div class="item-info">
-				<span class="item-title"><?php the_title(); ?><!-- /.item-title --></span>
-	  		<span class="item-price">
-	  			<?php 
-						$price = get_post_meta($post->ID, 'Gia', true);
-						if($price=="") 
-							echo '<span class="btn btn-success btn-sm " target="_blank"><i class="glyphicon glyphicon-phone"></i> Giá Liên hệ</span>';
-						 else
-						   echo  $price." VND"; ?> </span><br />
-					
-	  		<!-- /.item-price --></span>
-	  		<a class="btn btn-info btn" href="<?php the_permalink(); ?>" target="_blank"><i class="fa fa-shopping-cart"></i>Xem chi tiết</a>
-	  	<!-- /.item-info --></div>
-		</a>
-	<!-- /.content_box --></div>
-<!-- /.product-detai --></div>
+				<span class="cat-links"><i class="fa fa-folder-open-o"></i>
+					<?php printf( esc_html__( ' %1$s', 'sparkling' ), $categories_list ); ?>
+				</span>
+				<?php endif; // End if categories ?>
+				<?php edit_post_link( esc_html__( 'Edit', 'sparkling' ), '<i class="fa fa-pencil-square-o"></i><span class="edit-link">', '</span>' ); ?>
+
+			</div><!-- .entry-meta -->
+		</header><!-- .entry-header -->
+
+		<div class="entry-content">
+			<?php the_content(); ?>
+			<?php
+				wp_link_pages( array(
+					'before'            => '<div class="page-links">'.esc_html__( 'Pages:', 'sparkling' ),
+					'after'             => '</div>',
+					'link_before'       => '<span>',
+					'link_after'        => '</span>',
+					'pagelink'          => '%',
+					'echo'              => 1
+	       		) );
+	    	?>
+			
+	    	
+		</div><!-- .entry-content -->
+
+		<footer class="entry-meta">
+
+	    	<?php if(has_tag()) : ?>
+	      <!-- tags -->
+	      <div class="tagcloud">
+
+	          <?php
+	              $tags = get_the_tags(get_the_ID());
+	              foreach($tags as $tag){
+	                  echo '<a href="'.get_tag_link($tag->term_id).'">'.$tag->name.'</a> ';
+	              } ?>
+
+	      </div>
+	      <!-- end tags -->
+	      <?php endif; ?>
+
+		</footer><!-- .entry-meta -->
+	</div>
+
+	<?php if (get_the_author_meta('description')) :  ?>
+		<div class="post-inner-content secondary-content-box">
+      <!-- author bio -->
+      <div class="author-bio content-box-inner">
+
+        <!-- avatar -->
+        <div class="avatar">
+            <?php echo get_avatar(get_the_author_meta('ID') , '60'); ?>
+        </div>
+        <!-- end avatar -->
+
+        <!-- user bio -->
+        <div class="author-bio-content">
+
+          <h4 class="author-name"><a href="<?php echo get_author_posts_url(get_the_author_meta( 'ID' )); ?>"><?php echo get_the_author_meta('display_name'); ?></a></h4>
+          <p class="author-description">
+              <?php echo get_the_author_meta('description'); ?>
+          </p>
+
+        </div><!-- end .author-bio-content -->
+
+      </div><!-- end .author-bio  -->
+
+		</div>
+		<?php endif; ?>
+	   
+	 <?php get_template_part( 'related', 'laptop-linh-kien' ); ?>
+</article><!-- #post-## -->
